@@ -1,0 +1,55 @@
+/* MHBM — Base & Reset */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Tajawal:wght@300;400;500;600;700&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--off-white);color:var(--gray-900);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+[dir="rtl"] body{font-family:var(--font-arabic)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+ul,ol{list-style:none}
+input,textarea,select{font-family:inherit;font-size:inherit}
+h1,h2,h3,h4,h5{line-height:1.2;font-weight:600}
+
+/* Layout */
+.container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 48px}
+@media(max-width:768px){.container{padding:0 20px}}
+
+/* Typography Scale */
+.display-xl{font-family:var(--font-display);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:700;line-height:1.1;letter-spacing:-.02em}
+.display-lg{font-family:var(--font-display);font-size:clamp(1.9rem,3.5vw,3rem);font-weight:600;line-height:1.15;letter-spacing:-.015em}
+.display-md{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:600;line-height:1.2}
+.display-sm{font-family:var(--font-display);font-size:clamp(1.2rem,2vw,1.7rem);font-weight:600;line-height:1.25}
+.text-xl{font-size:1.25rem;line-height:1.6}
+.text-lg{font-size:1.0625rem;line-height:1.65}
+.text-md{font-size:.9375rem;line-height:1.65}
+.text-sm{font-size:.875rem;line-height:1.6}
+.text-xs{font-size:.8125rem;line-height:1.55}
+.label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light)}
+.text-center{text-align:center}
+.text-blue{color:var(--blue-inst)}
+.text-gold{color:var(--gold-light)}
+.text-muted{color:var(--gray-500)}
+.font-display{font-family:var(--font-display)}
+
+/* Sections */
+.section{padding:88px 0}
+.section-sm{padding:56px 0}
+.section-xs{padding:36px 0}
+.section-white{background:var(--white)}
+.section-soft{background:var(--gray-soft)}
+.section-blue{background:var(--blue-inst);color:var(--white)}
+.section-deep{background:var(--blue-deep);color:var(--white)}
+
+/* Grid utilities */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.flex{display:flex}.flex-col{flex-direction:column}
+.flex-center{display:flex;align-items:center;justify-content:center}
+.flex-between{display:flex;align-items:center;justify-content:space-between}
+.gap-2{gap:8px}.gap-3{gap:12px}.gap-4{gap:16px}.gap-5{gap:20px}.gap-6{gap:24px}
+
+@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}.section{padding:56px 0}.section-sm{padding:36px 0}}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Consultation en Ligne | Cabinet MHBM Avocats-Conseils</title>
+<meta name="description" content="Consultez Cabinet MHBM Avocats-Conseils en ligne — vidéo, WhatsApp ou avis écrit. Réponse sous 24h.">
+<link rel="stylesheet" href="../assets/css/variables.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/nav-footer.css">
+<link rel="stylesheet" href="../assets/css/animations.css">
+</head>
+<body>
+<main id="main-content">
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb"><a href="../index.html">Accueil</a><span class="breadcrumb-sep">/</span><span>Consultation en Ligne</span></nav>
+    <h1 class="display-lg" style="color:var(--blue-deep);margin:18px 0 12px">Consultation en Ligne</h1>
+    <p class="text-xl" style="color:var(--gray-500);font-weight:300;max-width:580px">Consultez notre cabinet depuis n'importe où — trois modes adaptés à votre situation.</p>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:60px" data-stagger>
+      <div id="video" class="card" style="padding:32px;text-align:center">
+        <div style="width:64px;height:64px;background:var(--blue-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem">🎥</div>
+        <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:10px">Rendez-vous Vidéo</h2>
+        <p style="font-size:.875rem;color:var(--gray-500);line-height:1.7;margin-bottom:18px">Entretien confidentiel avec l'avocat compétent via Zoom ou Google Meet.</p>
+        <p style="font-size:.78rem;color:var(--gray-400,#999);margin-bottom:18px">⏱ 45 minutes · Sur rendez-vous</p>
+        <a href="#form-video" class="btn btn-primary" style="width:100%;justify-content:center;display:flex">Réserver un créneau</a>
+      </div>
+      <div class="card" style="padding:32px;text-align:center;background:var(--blue-inst);border-color:var(--blue-inst);position:relative">
+        <span style="position:absolute;top:16px;right:16px;background:var(--gold-light);color:white;padding:2px 8px;border-radius:100px;font-size:.65rem;font-weight:700;letter-spacing:.05em">POPULAIRE</span>
+        <div style="width:64px;height:64px;background:rgba(255,255,255,.15);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem">💬</div>
+        <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:10px;color:white">WhatsApp</h2>
+        <p style="font-size:.875rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:18px">Posez votre question directement. Idéal pour une première orientation ou un suivi rapide.</p>
+        <p style="font-size:.78rem;color:rgba(255,255,255,.55);margin-bottom:18px">⏱ Réponse sous 24h ouvrées</p>
+        <a href="https://wa.me/21698258015" class="btn btn-gold" style="width:100%;justify-content:center;display:flex" target="_blank">Écrire maintenant</a>
+      </div>
+      <div id="ecrit" class="card" style="padding:32px;text-align:center">
+        <div style="width:64px;height:64px;background:var(--blue-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem">📝</div>
+        <h2 style="font-size:1.05rem;font-weight:700;margin-bottom:10px">Avis Juridique Écrit</h2>
+        <p style="font-size:.875rem;color:var(--gray-500);line-height:1.7;margin-bottom:18px">Avis juridique PDF signé livré sous 48 à 72h ouvrées en français et en arabe.</p>
+        <p style="font-size:.78rem;color:var(--gray-400,#999);margin-bottom:18px">📄 PDF signé · FR & AR</p>
+        <a href="#form-ecrit" class="btn btn-primary" style="width:100%;justify-content:center;display:flex">Demander un avis</a>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div id="form-video" style="max-width:720px;margin:0 auto" data-reveal>
+      <div style="background:var(--gray-soft);border-radius:var(--radius-lg);padding:40px">
+        <h2 style="font-family:var(--font-display);font-size:1.5rem;color:var(--blue-deep);margin-bottom:6px">Réserver une consultation</h2>
+        <p style="color:var(--gray-500);font-size:.9375rem;margin-bottom:28px">Première prise de contact gratuite. Réponse sous 24h ouvrées.</p>
+        <form data-form="consultation">
+          <div class="grid-2">
+            <div class="form-group"><label class="form-label" data-i18n="form_name">Prénom et Nom *</label><input type="text" class="form-input" required placeholder="Mohamed Ben Ali"></div>
+            <div class="form-group"><label class="form-label" data-i18n="form_email">Email *</label><input type="email" class="form-input" required placeholder="votre@email.com"></div>
+          </div>
+          <div class="grid-2">
+            <div class="form-group"><label class="form-label" data-i18n="form_phone">Téléphone / WhatsApp *</label><input type="tel" class="form-input" required placeholder="+33 ou +216..."></div>
+            <div class="form-group"><label class="form-label" data-i18n="form_country">Pays de résidence</label>
+              <select class="form-select">
+                <option>France</option><option>Belgique</option><option>Allemagne</option><option>Canada</option><option>Italie</option><option>Pays du Golfe</option><option>Tunisie</option><option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label class="form-label">Type de consultation</label>
+            <select class="form-select">
+              <option>Rendez-vous vidéo (45 min)</option><option>Consultation WhatsApp</option><option>Avis juridique écrit (PDF)</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label" data-i18n="form_subject">Domaine juridique *</label>
+            <select class="form-select" required>
+              <option value="">Sélectionner...</option>
+              <option>Droit Successoral / Héritage</option><option>Droit Immobilier</option><option>Divorce International</option><option>Droit des Affaires</option><option>Droit Pénal</option><option>Nationalité Tunisienne</option><option>Arbitrage & Médiation</option><option>Recouvrement de Créances</option><option>Droit du Travail</option><option>Droit de la Famille</option><option>Accidents & Indemnisation</option><option>Baux & Litiges</option><option>Procuration</option><option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label" data-i18n="form_msg">Décrivez votre situation *</label><textarea class="form-textarea" required placeholder="Exposez brièvement votre situation. Toutes les informations partagées sont strictement confidentielles."></textarea></div>
+          <div style="display:flex;align-items:flex-start;gap:10px;padding:14px;background:var(--gold-pale);border-radius:var(--radius-sm);margin-bottom:20px;border:1px solid var(--gold-light)" role="note">
+            <span>🔒</span><p style="font-size:.8125rem;color:#7A5C1E;line-height:1.6;margin:0">Vos informations sont protégées par le secret professionnel de l'avocat. Elles ne seront jamais partagées avec des tiers.</p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center" data-i18n="form_rdv_submit">Réserver ma consultation</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div style="text-align:center;max-width:580px;margin:0 auto 44px" data-reveal>
+      <h2 class="display-sm" style="color:var(--blue-deep)">Questions fréquentes sur la consultation en ligne</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto" data-reveal>
+      <div class="faq-item"><button class="faq-trigger" aria-expanded="false"><span>La consultation en ligne est-elle aussi efficace qu'en présentiel ?</span><span class="faq-icon">+</span></button><div class="faq-content"><div class="faq-body">Oui, absolument. La qualité du conseil est identique. Elle bénéficie de la même protection du secret professionnel et du même niveau d'expertise. La grande majorité de nos clients à l'étranger gèrent l'intégralité de leur dossier à distance.</div></div></div>
+      <div class="faq-item"><button class="faq-trigger" aria-expanded="false"><span>Comment puis-je envoyer des documents confidentiels ?</span><span class="faq-icon">+</span></button><div class="faq-content"><div class="faq-body">Via notre espace client sécurisé, par email ou par WhatsApp. Pour les documents très sensibles, nous recommandons l'espace client qui dispose d'une connexion sécurisée.</div></div></div>
+      <div class="faq-item"><button class="faq-trigger" aria-expanded="false"><span>La première consultation est-elle vraiment gratuite ?</span><span class="faq-icon">+</span></button><div class="faq-content"><div class="faq-body">Oui. La première prise de contact (analyse de votre situation, orientation) est gratuite. Si vous souhaitez aller plus loin, nous vous proposons un devis clair et transparent avant tout engagement.</div></div></div>
+      <div class="faq-item"><button class="faq-trigger" aria-expanded="false"><span>Quelle est la différence entre un avis juridique écrit et une consultation vidéo ?</span><span class="faq-icon">+</span></button><div class="faq-content"><div class="faq-body">La consultation vidéo est un échange interactif où vous pouvez poser des questions en temps réel. L'avis juridique écrit est un document formel signé par l'avocat qui analyse votre situation et formule des recommandations — il peut être produit comme preuve de bonne foi.</div></div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="../assets/js/lang/fr.js"></script>
+<script src="../assets/js/lang/ar.js"></script>
+<script src="../assets/js/core.js"></script>
+<script src="../assets/js/components/page-template.js"></script>
+</body>
+</html>

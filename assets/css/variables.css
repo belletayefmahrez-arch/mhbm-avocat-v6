@@ -1,0 +1,21 @@
+/* MHBM AVOCATS-CONSEILS — Design Tokens */
+:root {
+  --blue-deep:#071F45; --blue-inst:#0A3977; --blue-mid:#1B4C96;
+  --blue-light:#EEF3FB; --blue-soft:#F0F5FF;
+  --gold-rich:#B58A45; --gold-light:#C89A55; --gold-pale:#F0DFB8;
+  --white:#FFFFFF; --off-white:#FAFAFA; --gray-soft:#F7F8FA;
+  --gray-100:#EFEFEF; --gray-300:#DADADA; --gray-500:#6F6F6F;
+  --gray-700:#3A3A3A; --gray-900:#1D1D1D;
+  --success:#2D9E5F; --error:#D93025; --warning:#E08C00;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+  --font-arabic:'Tajawal','Arial',sans-serif;
+  --max-w:1280px; --nav-h:72px;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:16px;
+  --shadow-sm:0 1px 3px rgba(7,31,69,.07);
+  --shadow-md:0 4px 20px rgba(7,31,69,.11);
+  --shadow-lg:0 12px 48px rgba(7,31,69,.16);
+  --ease:cubic-bezier(.4,0,.2,1);
+  --tr:.28s var(--ease);
+}
+[dir="rtl"] { --font-body:'Tajawal',system-ui,sans-serif; }

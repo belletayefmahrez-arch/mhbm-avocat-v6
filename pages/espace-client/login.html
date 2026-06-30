@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion — Espace Client | Cabinet MHBM Avocats-Conseils</title>
+<meta name="description" content="Accédez à votre espace client sécurisé — Cabinet MHBM Avocats-Conseils.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/nav-footer.css">
+<link rel="stylesheet" href="../../assets/css/animations.css">
+<link rel="stylesheet" href="../../assets/css/espace-client.css">
+<style>
+.auth-page{min-height:calc(100vh - 108px);display:flex;align-items:center;justify-content:center;background:var(--gray-soft);padding:48px 20px}
+.auth-box{background:white;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);max-width:440px;width:100%;padding:44px 40px}
+.auth-logo{text-align:center;margin-bottom:28px}
+.auth-demo-banner{background:var(--gold-pale);border:1px solid var(--gold-light);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:24px;font-size:.84rem;color:#7A5C1E;line-height:1.6}
+.auth-title{font-family:var(--font-display);font-size:1.4rem;font-weight:600;color:var(--blue-deep);text-align:center;margin-bottom:8px}
+.auth-sub{text-align:center;color:var(--gray-500);font-size:.875rem;margin-bottom:28px}
+.divider-or{display:flex;align-items:center;gap:12px;margin:24px 0;color:var(--gray-400,#aaa);font-size:.78rem}
+.divider-or::before,.divider-or::after{content:'';flex:1;height:1px;background:var(--gray-100)}
+.pw-wrap{position:relative}
+.pw-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);cursor:pointer;color:var(--gray-500);background:none;border:none}
+[dir="rtl"] .pw-toggle{right:auto;left:14px}
+.pw-toggle svg{width:18px;height:18px}
+.step-indicator{display:flex;justify-content:center;gap:8px;margin-bottom:24px}
+.step-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-300);transition:var(--tr)}
+.step-dot.active{background:var(--blue-inst);width:24px;border-radius:4px}
+.method-toggle{display:flex;gap:0;margin-bottom:20px;border:1.5px solid var(--gray-300);border-radius:var(--radius-sm);overflow:hidden}
+.method-btn{flex:1;padding:10px;text-align:center;font-size:.875rem;font-weight:500;background:white;color:var(--gray-500);cursor:pointer;border:none;font-family:inherit;transition:var(--tr)}
+.method-btn.active{background:var(--blue-inst);color:white}
+</style>
+</head>
+<body>
+<main id="main-content">
+
+<section class="auth-page">
+  <div class="auth-box">
+    <div class="auth-logo">
+      <div class="logo-ph" style="margin:0 auto">
+        <span class="logo-ph-name">MHBM AVOCATS-CONSEILS</span>
+        <span class="logo-ph-file">logo-mhbm.svg · 170×52px</span>
+      </div>
+    </div>
+
+    <div class="auth-demo-banner">
+      ⚠️ <strong>Mode démonstration</strong> — Cet espace client est une démonstration fonctionnelle. Utilisez le bouton "Connexion démo" pour explorer un compte fictif (Mahrez Beltaief). Aucune donnée réelle n'est utilisée.
+    </div>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login" data-i18n="ec_login">Connexion</button>
+      <button class="auth-tab" data-tab="register" data-i18n="ec_register">Créer un compte</button>
+    </div>
+
+    <!-- ═══ LOGIN PANEL ═══ -->
+    <div class="auth-panel active" id="panel-login">
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label" data-i18n="ec_email">Email</label>
+          <input type="email" class="form-input" id="login-email" placeholder="votre@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="ec_password">Mot de passe</label>
+          <div class="pw-wrap">
+            <input type="password" class="form-input" id="login-password" placeholder="••••••••" required>
+            <button type="button" class="pw-toggle" data-toggle="login-password" aria-label="Afficher le mot de passe">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;margin-bottom:20px">
+          <a href="#" id="forgot-link" style="font-size:.8125rem;color:var(--blue-inst)">Mot de passe oublié ?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Se connecter</button>
+      </form>
+
+      <div class="divider-or">OU</div>
+
+      <button type="button" id="demo-login-btn" class="btn btn-gold btn-lg" style="width:100%;justify-content:center" data-i18n="ec_demo">⚡ Connexion démo (Mahrez Beltaief)</button>
+    </div>
+
+    <!-- ═══ REGISTER PANEL ═══ -->
+    <div class="auth-panel" id="panel-register">
+      <!-- STEP 1: Choose method -->
+      <div id="reg-step-1">
+        <div class="step-indicator"><span class="step-dot active"></span><span class="step-dot"></span><span class="step-dot"></span></div>
+        <h2 class="auth-title" style="font-size:1.1rem">Créer votre compte</h2>
+        <p class="auth-sub">Choisissez votre méthode d'inscription</p>
+        <div class="method-toggle">
+          <button class="method-btn active" data-method="email">📧 Email</button>
+          <button class="method-btn" data-method="phone">📱 Téléphone</button>
+        </div>
+        <form id="reg-form-1">
+          <div class="form-group" id="reg-email-group">
+            <label class="form-label">Adresse email</label>
+            <input type="email" class="form-input" id="reg-email" placeholder="votre@email.com">
+          </div>
+          <div class="form-group" id="reg-phone-group" style="display:none">
+            <label class="form-label">Numéro de téléphone</label>
+            <input type="tel" class="form-input" id="reg-phone" placeholder="+33 6 12 34 56 78">
+          </div>
+          <div class="grid-2" style="margin-bottom:0">
+            <div class="form-group"><label class="form-label">Prénom</label><input type="text" class="form-input" id="reg-prenom" required></div>
+            <div class="form-group"><label class="form-label">Nom</label><input type="text" class="form-input" id="reg-nom" required></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:8px" data-i18n="ec_send_code">Envoyer le code</button>
+        </form>
+      </div>
+
+      <!-- STEP 2: Verify code -->
+      <div id="reg-step-2" style="display:none">
+        <div class="step-indicator"><span class="step-dot"></span><span class="step-dot active"></span><span class="step-dot"></span></div>
+        <h2 class="auth-title" style="font-size:1.1rem">Vérification</h2>
+        <p class="verify-hint" id="verify-hint-text">Un code à 6 chiffres a été envoyé. Saisissez-le ci-dessous (démo : utilisez <strong>123456</strong>).</p>
+        <form id="reg-form-2">
+          <div class="form-group">
+            <input type="text" class="form-input verify-code-input" id="verify-code" maxlength="6" placeholder="000000" inputmode="numeric" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">Vérifier le code</button>
+          <button type="button" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:10px" id="back-to-step1">← Retour</button>
+        </form>
+      </div>
+
+      <!-- STEP 3: Create password -->
+      <div id="reg-step-3" style="display:none">
+        <div class="step-indicator"><span class="step-dot"></span><span class="step-dot"></span><span class="step-dot active"></span></div>
+        <h2 class="auth-title" style="font-size:1.1rem">Créez votre mot de passe</h2>
+        <p class="auth-sub">Dernière étape avant d'accéder à votre espace</p>
+        <form id="reg-form-3">
+          <div class="form-group">
+            <label class="form-label">Mot de passe</label>
+            <div class="pw-wrap">
+              <input type="password" class="form-input" id="reg-password" placeholder="8 caractères minimum" required minlength="8">
+              <button type="button" class="pw-toggle" data-toggle="reg-password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Confirmer le mot de passe</label>
+            <input type="password" class="form-input" id="reg-password-confirm" placeholder="••••••••" required minlength="8">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center" data-i18n="ec_create_account">Créer mon compte</button>
+        </form>
+      </div>
+    </div>
+
+    <p style="text-align:center;margin-top:24px;font-size:.8125rem">
+      <a href="../../index.html" style="color:var(--gray-500)">← Retour au site</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<script src="../../assets/js/lang/fr.js"></script>
+<script src="../../assets/js/lang/ar.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="../../assets/js/espace-client/client-data.js"></script>
+<script>
+// ── TABS ──
+document.querySelectorAll('.auth-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.auth-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.auth-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-'+tab.dataset.tab).classList.add('active');
+  });
+});
+
+// ── PASSWORD TOGGLE ──
+document.querySelectorAll('.pw-toggle').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const input = document.getElementById(btn.dataset.toggle);
+    input.type = input.type==='password' ? 'text':'password';
+  });
+});
+
+// ── LOGIN ──
+document.getElementById('login-form').addEventListener('submit', e=>{
+  e.preventDefault();
+  const email = document.getElementById('login-email').value;
+  MHBM_EC.auth.login(email);
+  window.location.href = 'dashboard.html';
+});
+
+document.getElementById('demo-login-btn').addEventListener('click', ()=>{
+  MHBM_EC.auth.demoLogin();
+  window.location.href = 'dashboard.html';
+});
+
+document.getElementById('forgot-link').addEventListener('click', e=>{
+  e.preventDefault();
+  MHBM.toast('Un lien de réinitialisation a été envoyé (démo).');
+});
+
+// ── REGISTER FLOW ──
+let regMethod = 'email';
+document.querySelectorAll('.method-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.method-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    regMethod = btn.dataset.method;
+    document.getElementById('reg-email-group').style.display = regMethod==='email' ? 'block':'none';
+    document.getElementById('reg-phone-group').style.display = regMethod==='phone' ? 'block':'none';
+    document.getElementById('reg-email').required = regMethod==='email';
+    document.getElementById('reg-phone').required = regMethod==='phone';
+  });
+});
+
+let regData = {};
+
+document.getElementById('reg-form-1').addEventListener('submit', e=>{
+  e.preventDefault();
+  regData.prenom = document.getElementById('reg-prenom').value;
+  regData.nom = document.getElementById('reg-nom').value;
+  regData.email = document.getElementById('reg-email').value;
+  regData.phone = document.getElementById('reg-phone').value;
+  const target = regMethod==='email' ? regData.email : regData.phone;
+  document.getElementById('verify-hint-text').innerHTML = `Un code à 6 chiffres a été envoyé à <strong>${target}</strong>. Saisissez-le ci-dessous (démo : utilisez <strong>123456</strong>).`;
+  document.getElementById('reg-step-1').style.display='none';
+  document.getElementById('reg-step-2').style.display='block';
+});
+
+document.getElementById('back-to-step1').addEventListener('click', ()=>{
+  document.getElementById('reg-step-2').style.display='none';
+  document.getElementById('reg-step-1').style.display='block';
+});
+
+document.getElementById('reg-form-2').addEventListener('submit', e=>{
+  e.preventDefault();
+  const code = document.getElementById('verify-code').value;
+  if(code !== '123456'){
+    MHBM.toast('Code incorrect. Essayez 123456 (démo).', 'error');
+    return;
+  }
+  document.getElementById('reg-step-2').style.display='none';
+  document.getElementById('reg-step-3').style.display='block';
+});
+
+document.getElementById('reg-form-3').addEventListener('submit', e=>{
+  e.preventDefault();
+  const pw = document.getElementById('reg-password').value;
+  const pwc = document.getElementById('reg-password-confirm').value;
+  if(pw !== pwc){
+    MHBM.toast('Les mots de passe ne correspondent pas.', 'error');
+    return;
+  }
+  MHBM_EC.auth.register(regData);
+  MHBM.toast('Compte créé avec succès ! Redirection...');
+  setTimeout(()=>{ window.location.href='dashboard.html'; }, 1200);
+});
+</script>
+</body>
+</html>

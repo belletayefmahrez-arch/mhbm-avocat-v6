@@ -1,0 +1,52 @@
+/* MHBM — Animations & Responsive */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+@keyframes countUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+[data-reveal].revealed{opacity:1;transform:translateY(0)}
+[data-reveal="fade"]{transform:none}
+[data-reveal="scale"]{transform:scale(.95)}
+[data-reveal="scale"].revealed{transform:scale(1)}
+[data-stagger]>*{opacity:0;transform:translateY(22px);transition:opacity .55s var(--ease),transform .55s var(--ease)}
+[data-stagger]>*.revealed{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){[data-reveal],[data-stagger]>*{transition:none;opacity:1;transform:none}}
+
+/* Mobile Responsive */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr!important}
+  .hero-image-col{display:none}
+  .section{padding:64px 0}
+  .expertise-grid{grid-template-columns:repeat(2,1fr)!important}
+  .testimonials-grid{grid-template-columns:repeat(2,1fr)!important}
+}
+@media(max-width:768px){
+  .section{padding:48px 0}
+  .section-sm{padding:32px 0}
+  .display-xl{font-size:2rem}
+  .display-lg{font-size:1.7rem}
+  .expertise-grid{grid-template-columns:1fr!important}
+  .testimonials-grid{grid-template-columns:1fr!important}
+  .team-grid{grid-template-columns:repeat(2,1fr)!important}
+  .stats-grid{grid-template-columns:repeat(2,1fr)!important}
+  .stat-item::after{display:none!important}
+  .cta-actions{flex-direction:column;align-items:stretch}
+  .cta-actions .btn{justify-content:center}
+  .consulting-grid{grid-template-columns:1fr!important}
+  .tunisiens-grid{grid-template-columns:1fr!important}
+  .sidebar-layout{grid-template-columns:1fr!important}
+  .page-hero{padding:40px 0 32px}
+  .section-header{margin-bottom:36px}
+}
+@media(max-width:480px){
+  .team-grid{grid-template-columns:1fr!important}
+  .stats-grid{grid-template-columns:1fr!important}
+  .btn{padding:11px 20px;font-size:.875rem}
+  .btn-lg{padding:13px 24px;font-size:.9375rem}
+  .grid-2{grid-template-columns:1fr!important}
+  .footer-socials{flex-wrap:wrap}
+}
+@media print{.navbar,.topbar,.wa-float,#back-to-top,.cookie-banner,.mobile-menu{display:none!important}.section{padding:20px 0}}

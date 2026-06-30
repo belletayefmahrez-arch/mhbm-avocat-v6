@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord — Espace Client | Cabinet MHBM Avocats-Conseils</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../../assets/css/variables.css">
+<link rel="stylesheet" href="../../assets/css/base.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/nav-footer.css">
+<link rel="stylesheet" href="../../assets/css/animations.css">
+<link rel="stylesheet" href="../../assets/css/espace-client.css">
+</head>
+<body>
+
+<!-- Simplified top bar for client area -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-inner container">
+    <a href="../../index.html" class="navbar-logo">
+      <div class="logo-ph"><span class="logo-ph-name">MHBM AVOCATS-CONSEILS</span><span class="logo-ph-file">logo-mhbm.svg</span></div>
+    </a>
+    <div class="navbar-actions">
+      <span class="badge badge-gold">Espace Client — Démo</span>
+      <div class="lang-sw"><button class="lang-btn active" data-lang="fr">FR</button><button class="lang-btn" data-lang="ar">عر</button></div>
+      <a href="../../index.html" class="btn btn-ghost btn-sm">← Retour au site</a>
+    </div>
+  </div>
+</nav>
+
+<div class="client-layout">
+  <!-- SIDEBAR -->
+  <aside class="client-sidebar">
+    <div class="sidebar-user">
+      <div class="sidebar-avatar" id="user-avatar">MB</div>
+      <div class="sidebar-name" id="user-name">Mahrez Beltaief</div>
+      <div class="sidebar-sub" id="user-loc">Lyon, France</div>
+      <span class="sidebar-demo">Compte démo</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-label">Vue d'ensemble</div>
+      <button class="sidebar-link active" data-section="dashboard">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-dashboard"/></svg>
+        <span data-i18n="ec_dashboard">Tableau de bord</span>
+      </button>
+      <div class="sidebar-label">Mon Dossier</div>
+      <button class="sidebar-link" data-section="dossiers">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-folder"/></svg>
+        <span data-i18n="ec_dossiers">Mes Dossiers</span>
+        <span class="sidebar-badge">3</span>
+      </button>
+      <button class="sidebar-link" data-section="consultations">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-video"/></svg>
+        <span data-i18n="ec_consultations">Consultations</span>
+      </button>
+      <button class="sidebar-link" data-section="documents">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-document"/></svg>
+        <span data-i18n="ec_documents">Documents</span>
+      </button>
+      <button class="sidebar-link" data-section="messages">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-message"/></svg>
+        <span data-i18n="ec_messages">Messages</span>
+        <span class="sidebar-badge" id="msg-badge">2</span>
+      </button>
+      <button class="sidebar-link" data-section="factures">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-payment"/></svg>
+        <span data-i18n="ec_invoices">Factures</span>
+        <span class="sidebar-badge" id="fac-badge">1</span>
+      </button>
+      <div class="sidebar-sep"></div>
+      <div class="sidebar-label">Compte</div>
+      <button class="sidebar-link" data-section="profil">
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-user"/></svg>
+        <span data-i18n="ec_profile">Mon Profil</span>
+      </button>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="sidebar-logout" id="logout-btn">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.75"><use href="#icon-logout"/></svg>
+        <span data-i18n="ec_logout">Déconnexion</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="client-main">
+
+    <!-- DASHBOARD -->
+    <section class="client-section active" id="section-dashboard">
+      <div class="client-section-title">
+        <div><h2 data-i18n="ec_dashboard">Tableau de bord</h2><p>Bienvenue, <span id="welcome-name">Mahrez</span> 👋</p></div>
+      </div>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kpi-icon" style="background:var(--blue-light);color:var(--blue-inst)">📁</div><div><div class="kpi-val">2</div><div class="kpi-lbl" data-i18n="ec_active_cases">Dossiers actifs</div></div></div>
+        <div class="kpi"><div class="kpi-icon" style="background:#FEF3E2;color:var(--warning)">✉️</div><div><div class="kpi-val">2</div><div class="kpi-lbl" data-i18n="ec_unread_msg">Messages non lus</div></div></div>
+        <div class="kpi"><div class="kpi-icon" style="background:#FEECEC;color:var(--error)">💳</div><div><div class="kpi-val" dir="ltr">1</div><div class="kpi-lbl" data-i18n="ec_pending_inv">Facture en attente</div></div></div>
+        <div class="kpi"><div class="kpi-icon" style="background:#E7F8EF;color:var(--success)">📅</div><div><div class="kpi-val" style="font-size:1.1rem" dir="ltr">28 juin</div><div class="kpi-lbl" data-i18n="ec_next_rdv">Prochain RDV</div></div></div>
+      </div>
+
+      <div class="rdv-box" style="margin-bottom:20px">
+        <div class="rdv-icon">🎥</div>
+        <div>
+          <div class="rdv-label" data-i18n="ec_next_appt">Prochain rendez-vous</div>
+          <div class="rdv-detail">Consultation vidéo avec Me Ben Makhlouf — <span dir="ltr">28 juin 2025, 14h00</span> — Point d'avancement succession</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:16px">
+        <div class="client-card">
+          <div class="client-card-title">Mes Dossiers en Cours</div>
+          <div id="dash-dossiers"></div>
+        </div>
+        <div class="client-card">
+          <div class="client-card-title" data-i18n="ec_notifications">Notifications</div>
+          <div id="dash-notifs"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOSSIERS -->
+    <section class="client-section" id="section-dossiers">
+      <div class="client-section-title"><div><h2 data-i18n="ec_dossiers">Mes Dossiers</h2><p>Suivi détaillé de chaque dossier juridique</p></div></div>
+      <div id="full-dossiers"></div>
+    </section>
+
+    <!-- CONSULTATIONS -->
+    <section class="client-section" id="section-consultations">
+      <div class="client-section-title"><div><h2 data-i18n="ec_consultations">Mes Consultations</h2><p>Historique et rendez-vous à venir</p></div><a href="../consultation-ligne.html" class="btn btn-primary btn-sm">+ Nouvelle consultation</a></div>
+      <div id="full-consultations"></div>
+    </section>
+
+    <!-- DOCUMENTS -->
+    <section class="client-section" id="section-documents">
+      <div class="client-section-title"><div><h2 data-i18n="ec_documents">Mes Documents</h2><p>Tous les documents liés à vos dossiers</p></div></div>
+      <div id="full-documents"></div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section class="client-section" id="section-messages">
+      <div class="client-section-title"><div><h2 data-i18n="ec_messages">Messages</h2><p>Échanges avec le cabinet</p></div></div>
+      <div id="full-messages"></div>
+    </section>
+
+    <!-- FACTURES -->
+    <section class="client-section" id="section-factures">
+      <div class="client-section-title"><div><h2 data-i18n="ec_invoices">Mes Factures</h2><p>Historique de facturation et paiements</p></div></div>
+      <div id="full-factures"></div>
+    </section>
+
+    <!-- PROFIL -->
+    <section class="client-section" id="section-profil">
+      <div class="client-section-title"><div><h2 data-i18n="ec_profile">Mon Profil</h2><p>Vos informations personnelles</p></div></div>
+      <div class="client-card" style="max-width:560px">
+        <div class="grid-2">
+          <div class="form-group"><label class="form-label">Prénom</label><input type="text" class="form-input" id="profile-prenom"></div>
+          <div class="form-group"><label class="form-label">Nom</label><input type="text" class="form-input" id="profile-nom"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="profile-email"></div>
+        <div class="form-group"><label class="form-label">Téléphone</label><input type="tel" class="form-input" id="profile-phone"></div>
+        <div class="form-group"><label class="form-label">Ville</label><input type="text" class="form-input" id="profile-ville"></div>
+        <button class="btn btn-primary">Enregistrer les modifications</button>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<div id="icons-holder" style="display:none"></div>
+
+<script src="../../assets/js/lang/fr.js"></script>
+<script src="../../assets/js/lang/ar.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="../../assets/js/espace-client/client-data.js"></script>
+<script>
+// Load icon sprite
+fetch('../../assets/icons/icons.svg').then(r=>r.text()).then(h=>{document.getElementById('icons-holder').innerHTML=h;}).catch(()=>{});
+
+// Auth check
+if(!MHBM_EC.auth.requireAuth()) { /* redirected */ }
+const client = MHBM_EC.auth.getClient() || MHBM_EC.DEMO_CLIENT;
+
+// Populate user info
+document.getElementById('user-avatar').textContent = (client.prenom[0]+client.nom[0]).toUpperCase();
+document.getElementById('user-name').textContent = client.prenom+' '+client.nom;
+document.getElementById('user-loc').textContent = client.ville;
+document.getElementById('welcome-name').textContent = client.prenom;
+
+// Sidebar navigation
+document.querySelectorAll('.sidebar-link[data-section]').forEach(link=>{
+  link.addEventListener('click', ()=>{
+    document.querySelectorAll('.sidebar-link').forEach(l=>l.classList.remove('active'));
+    document.querySelectorAll('.client-section').forEach(s=>s.classList.remove('active'));
+    link.classList.add('active');
+    document.getElementById('section-'+link.dataset.section).classList.add('active');
+  });
+});
+
+document.getElementById('logout-btn').addEventListener('click', ()=>MHBM_EC.auth.logout());
+
+// Render Dossiers
+function statusBadge(s){
+  const map = {active:['En cours','badge-blue'], closed:['Clôturé','badge-green'], pending:['En attente','badge-gold']};
+  const [label, cls] = map[s] || ['—','badge-gray'];
+  return `<span class="badge ${cls}">${label}</span>`;
+}
+
+function renderDossierCard(d, full=false){
+  return `<div class="dos-row">
+    <div class="flex-between" style="margin-bottom:6px">
+      <div class="dos-title">${d.titre}</div>
+      ${statusBadge(d.statut)}
+    </div>
+    <div class="dos-meta">📁 <span dir="ltr">${d.id}</span> · ${d.type} · ${d.avocat}</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${d.progress}%;background:${d.color}"></div></div>
+    <div class="dos-next">${d.next}</div>
+    ${full ? `<div style="margin-top:10px;display:flex;gap:8px"><button class="btn btn-outline btn-sm">Voir détails</button><button class="btn btn-ghost btn-sm">Documents liés</button></div>` : ''}
+  </div>`;
+}
+
+document.getElementById('dash-dossiers').innerHTML = client.dossiers.filter(d=>d.statut!=='closed').map(d=>renderDossierCard(d)).join('') || '<p style="font-size:.875rem;color:var(--gray-500)">Aucun dossier actif.</p>';
+document.getElementById('full-dossiers').innerHTML = `<div class="client-card">${client.dossiers.map(d=>renderDossierCard(d,true)).join('')}</div>`;
+
+// Render notifications
+document.getElementById('dash-notifs').innerHTML = client.notifications.map(n=>`
+  <div class="notif-row">
+    <div class="notif-dot ${n.unread?'unread':'read'}"></div>
+    <div><div class="notif-text">${n.text}</div><div class="notif-time">${n.time}</div></div>
+  </div>`).join('');
+
+// Render consultations
+document.getElementById('full-consultations').innerHTML = `<div class="client-card">${client.consultations.map(c=>`
+  <div class="dos-row">
+    <div class="flex-between"><div class="dos-title">${c.sujet}</div><span class="badge ${c.statut==='confirmed'?'badge-blue':'badge-green'}">${c.statut==='confirmed'?'Confirmé':'Terminé'}</span></div>
+    <div class="dos-meta">${c.type==='Vidéo'?'🎥':'💬'} ${c.type} · <span dir="ltr">${c.date} à ${c.heure}</span> · ${c.avocat}</div>
+  </div>`).join('')}</div>`;
+
+// Render documents
+document.getElementById('full-documents').innerHTML = client.documents.map(d=>`
+  <div class="doc-row">
+    <div class="doc-icon">${d.icon}</div>
+    <div style="flex:1"><div class="doc-name">${d.nom}</div><div class="doc-meta">${d.type} · ${d.size} · <span dir="ltr">${d.date}</span> · Dossier <span dir="ltr">${d.dossier}</span></div></div>
+    <button class="btn btn-ghost btn-sm">⬇ Télécharger</button>
+  </div>`).join('');
+
+// Render messages
+document.getElementById('full-messages').innerHTML = client.messages.map(m=>`
+  <div class="msg-row ${m.unread?'unread':''}">
+    <div class="flex-between"><div class="msg-subj">${m.sujet}</div><div class="msg-date" dir="ltr">${m.date}</div></div>
+    <div class="msg-from">De : ${m.de}</div>
+    <div class="msg-preview">${m.preview}</div>
+  </div>`).join('');
+
+// Render factures
+document.getElementById('full-factures').innerHTML = client.factures.map(f=>`
+  <div class="fact-row">
+    <div class="fact-icon">${f.statut==='paid'?'✅':'⏳'}</div>
+    <div style="flex:1"><div class="fact-ref">${f.ref}</div><div class="fact-id"><span dir="ltr">${f.id}</span> · <span dir="ltr">${f.date}</span></div></div>
+    <div class="fact-amount" dir="ltr">${f.montant}</div>
+    ${f.statut==='pending' ? '<button class="btn btn-gold btn-sm">Payer</button>' : '<span class="badge badge-green">Réglée</span>'}
+  </div>`).join('');
+
+// Profile fields
+document.getElementById('profile-prenom').value = client.prenom;
+document.getElementById('profile-nom').value = client.nom;
+document.getElementById('profile-email').value = client.email;
+document.getElementById('profile-phone').value = client.phone;
+document.getElementById('profile-ville').value = client.ville;
+</script>
+</body>
+</html>
